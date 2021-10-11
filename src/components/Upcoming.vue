@@ -1,5 +1,9 @@
 <template>
-    <section></section>
+    <section>
+        <!-- <div class="icons">
+            <font-awesome-icon :icon="['fas', 'map-marker-alt']"/>
+        </div> -->
+    </section>
 </template>
 
 <script>

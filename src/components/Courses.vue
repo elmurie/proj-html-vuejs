@@ -1,5 +1,10 @@
 <template>
-    <section></section>
+    <section>
+        <!-- <div class="icons">
+            <font-awesome-icon :icon="['far', 'file-alt']"/>
+            <font-awesome-icon :icon="['far', 'user']"/>
+        </div> -->
+    </section>
 </template>
 
 <script>
