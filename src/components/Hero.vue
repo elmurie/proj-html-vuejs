@@ -1,7 +1,7 @@
 <template>
     <section class="hero d-flex justify-content-center align-items-center">
         <div class="text text-center">
-            <h3 class="handwriting">Hello, Im Matin</h3>
+            <h3 class="handwriting">Hello, Im Martin</h3>
             <h1>Artist Coaching And Mentoring Might Be for You.</h1>
             <button class="btn large dark-button">Get started today</button>
         </div>
@@ -17,12 +17,12 @@
         <img :src="diamondDots" alt="Diamond Dots" class="diamondDots">
         <img :src="painting" alt="Painting" class="painting">
         <img :src="spaceMonkey" alt="Space Monkey" class="spaceMonkey">
-        <!-- <div class="icons">
-            <font-awesome-icon :icon="['fas', 'ruler-combined']"/>
-            <font-awesome-icon :icon="['far', 'life-ring']"/>
-            <font-awesome-icon :icon="['fas', 'book']"/>
-            <font-awesome-icon :icon="['fas', 'shopping-cart']"/>
-        </div> -->
+        <ul class="icons d-flex flex-column align-items-center">
+            <li><font-awesome-icon :icon="['fas', 'ruler-combined']"/></li>
+            <li><font-awesome-icon :icon="['far', 'life-ring']"/></li>
+            <li><font-awesome-icon :icon="['fas', 'book']"/></li>
+            <li><font-awesome-icon :icon="['fas', 'shopping-cart']"/></li>
+        </ul>
     </section>
 </template>
 
@@ -71,7 +71,8 @@ export default {
         .headShot,
         .diamondDots,
         .painting,
-        .spaceMonkey {
+        .spaceMonkey,
+        .icons {
             position: absolute;
         }
         .bgShapeLeft,
@@ -128,6 +129,17 @@ export default {
             top: 50%;
             left: 7%;
             z-index: 5;
+        }
+        .icons {
+            background-color: #fff;
+            right: 0;
+            top: 5%;
+            padding : .3125rem;
+            box-shadow: -0.25rem .25rem .9375rem .1875rem hsla(0, 0%, 0%, 0.308);
+
+            & li {
+                margin : .4em 0;
+            }
         }
         .spaceMonkey,
         .painting,
