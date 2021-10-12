@@ -8,7 +8,7 @@
                     <h3 class="handwriting">Martin Garrix</h3>
                 </div>
                 <div class="col-6">
-                    <p class="mt-4">As a coach and mentor, my ultimate goal is to motivate visual artists toward inspired action. I help you get back on track to being the productive, creative, meaningful and authentic artist you truly want to be. I support artists in crafting and living a creative life as well as feeling good about themselves and their art.<br><br>
+                    <p>As a coach and mentor, my ultimate goal is to motivate visual artists toward inspired action. I help you get back on track to being the productive, creative, meaningful and authentic artist you truly want to be. I support artists in crafting and living a creative life as well as feeling good about themselves and their art.<br><br>
                     As an artist and educator for nearly 30 years, I understand what it takes to create.</p>
                     <button class="btn large light-button">Get started today</button>
                 </div>
@@ -35,6 +35,7 @@ section {
         .col-6 h2 {
             width: 50%;
             margin: 0 auto;
+            line-height: 2.9375rem;
         }
         .col-6 p {
             margin-top: 3.625rem;
