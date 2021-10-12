@@ -1,17 +1,30 @@
 <template>
     <header>
-        <div class="top-line d-flex justify-content-center align-items-center"> 
+        <div class="header-top d-flex justify-content-center align-items-center"> 
             <p>Starts on SATURDAY! Our biggest event of the year...</p>
-            <font-awesome-icon :icon="['far', 'clock']"/>
             <Countdown :year="2021" :month="9" :date="16" :hour="10" :minute="0" :second="0" :millisecond="0"/>
-            <button>Get ticket</button>
+            <button class="btn small dark-orange">Get ticket</button>
         </div>
-        <!-- <div class="icons">
-            <font-awesome-icon :icon="['fab', 'twitter']"/>
-            <font-awesome-icon :icon="['fab', 'facebook-f']"/>
-            <font-awesome-icon :icon="['fab', 'instagram']"/>
-            <font-awesome-icon :icon="['fab', 'linkedin']"/>
-        </div> -->
+        <nav class=" header-bottom container d-flex justify-content-between py-4">
+            <div class="logo w-25">
+                <img class="w-50" :src="logoImg" alt="MaxCoach logo">
+            </div>
+            <div class="links w-50">
+                <ul class="d-flex justify-content-center align-items-center ">
+                    <li v-for="(link, index) in links" :key="index" class="d-flex align-items-center me-3">
+                        <div class="text me-1">{{link}}</div>
+                        <font-awesome-icon :icon="['fas', 'chevron-down']"/>
+                    </li>
+                </ul>
+            </div>
+            <div class="icons w-25">
+                <ul class="d-flex justify-content-center align-items-center">
+                    <li v-for="(icon, index) in icons" :key="index" class="mx-3">
+                        <font-awesome-icon :icon="['fab', `${icon}`]"/>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
 </template>
 
@@ -22,17 +35,40 @@ export default {
     name : "Header",
     components : {
         Countdown
+    },
+    data() {
+        return {
+            links : ['Home', 'Pages', 'Courses', 'Features', 'Blog', 'Shop'],
+            icons : ['twitter', 'facebook-f', 'instagram', 'linkedin'],
+            logoImg : require('../assets/img/Header/dark-logo.png')
+        }
     }
 }
 </script>
 
 <style lang="scss" scoped>
     header {
-        background-color: #F5F5F5;
-        .top-line {
+        .header-top{
+            color: #8D807C;
+            padding: 5px;
+            background-color: #F5F5F5;
             & p {
             margin: 0;
-            } 
+            }
+        }
+        .header-bottom {
+            .links {
+                & .text {
+                    font-weight: 500;
+                }
+                & svg {
+                    font-size: .7em;
+                }
+            }
+            .icons {
+                color: #696969;
+            }
+        
         }
     }
     

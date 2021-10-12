@@ -1,5 +1,43 @@
+// Impor Google Font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 // Import BootStrap
 @import '~bootstrap/scss/bootstrap';
 
 // Import variables file
-@import './variables.scss'
+@import './variables.scss';
+
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Common 
+body {
+    font-family: 'Poppins', sans-serif;
+}
+ol, 
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+// Buttons
+.btn {
+    font-size: .7rem;
+    font-weight: 700;
+}
+
+.btn.small {
+    padding: .3125rem 1.875rem;
+    color: $whiteText;
+}
+
+.dark-orange {
+    background-color: $darkOrange;
+}

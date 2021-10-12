@@ -1,12 +1,24 @@
 <template>
-    <div v-if="loaded">
-        {{displayDays}}:{{displayHours}}:{{displayMinutes}}:{{displaySeconds}}
+    <div v-if="loaded" class="clock d-flex">
+        <div class="icon">
+            <font-awesome-icon :icon="['far', 'clock']"/>
+        </div>
+        <ul class="text d-flex align-items">
+            <li>{{displayDays}}</li>
+            <li>:</li>
+            <li>{{displayHours}}</li>
+            <li>:</li>
+            <li>{{displayMinutes}}</li>
+            <li>:</li>
+            <li>{{displaySeconds}}</li>
+            
+        </ul>
     </div>
 </template>
 
 <script>
 export default {
-    name : "Footer",
+    name : "Countdown",
     props: ['year', 'month', 'date', 'hour', 'minute', 'second', 'millisecond'],
     data() {
         return {
@@ -74,5 +86,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    .clock {
+        color: #000000;
+        margin : 0 1em;
+        font-weight: 700;
+
+        .icon {
+            margin-right: .5em;
+        }
+
+        .text li:nth-child(even) {
+            margin: 0 .2em;
+        }
+    }
 
 </style>
