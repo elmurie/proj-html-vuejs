@@ -1,5 +1,7 @@
-// Impor Google Font
+// Import Google Font - Poppins
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+// Import Google Font - Caramel
+@import url('https://fonts.googleapis.com/css2?family=Caramel&display=swap');
 // Import BootStrap
 @import '~bootstrap/scss/bootstrap';
 
@@ -35,9 +37,28 @@ ul {
 
 .btn.small {
     padding: .3125rem 1.875rem;
-    color: $whiteText;
 }
 
-.dark-orange {
-    background-color: $darkOrange;
+.btn.large {
+    padding: .9375rem 2.5rem;
+}
+
+.dark-button {
+    background-color: $darkButton;
+    color: $whiteText;
+    transition: .5s;
+
+    &:hover {
+        background-color: $darkButtonHover;
+        color: $whiteText;
+    }
+}
+
+// Typo
+
+.handwriting {
+    font-family: 'Caramel', cursive;
+    color: $darkButtonHover;
+    font-size: 3.5625rem;
+    margin-bottom : 0;
 }

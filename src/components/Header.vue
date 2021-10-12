@@ -3,7 +3,7 @@
         <div class="header-top d-flex justify-content-center align-items-center"> 
             <p>Starts on SATURDAY! Our biggest event of the year...</p>
             <Countdown :year="2021" :month="9" :date="16" :hour="10" :minute="0" :second="0" :millisecond="0"/>
-            <button class="btn small dark-orange">Get ticket</button>
+            <button class="btn small dark-button">Get ticket</button>
         </div>
         <nav class=" header-bottom container d-flex justify-content-between py-4">
             <div class="logo w-25">
@@ -40,7 +40,7 @@ export default {
         return {
             links : ['Home', 'Pages', 'Courses', 'Features', 'Blog', 'Shop'],
             icons : ['twitter', 'facebook-f', 'instagram', 'linkedin'],
-            logoImg : require('../assets/img/Header/dark-logo.png')
+            logoImg : require('../assets/img/dark-logo.png')
         }
     }
 }
