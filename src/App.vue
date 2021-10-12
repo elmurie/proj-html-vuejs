@@ -17,6 +17,9 @@ export default {
     Header,
     Main,
     Footer
+  },
+  created(){
+    document.title = "MaxCoach"
   }
 }
 </script>
