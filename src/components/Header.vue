@@ -17,9 +17,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="icons w-25">
+            <div class="icons w-25 d-flex justify-content-end">
                 <ul class="d-flex justify-content-center align-items-center">
-                    <li v-for="(icon, index) in icons" :key="index" class="mx-3">
+                    <li v-for="(icon, index) in icons" :key="index" class="d-flex justify-content-center align-items-center mx-3">
                         <font-awesome-icon :icon="['fab', `${icon}`]"/>
                     </li>
                 </ul>
@@ -52,6 +52,9 @@ export default {
             color: #8D807C;
             padding: 5px;
             background-color: #F5F5F5;
+            & .clock {
+                width: 8.3125rem;
+            }
             & p {
             margin: 0;
             }
@@ -67,6 +70,7 @@ export default {
             }
             .icons {
                 color: #696969;
+                font-size: 1.2em;
             }
         
         }
