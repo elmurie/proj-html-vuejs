@@ -55,6 +55,17 @@ ul {
     }
 }
 
+.light-button {
+    background-color: $lightButton;
+    color: $darkButton;
+    transition: .5s;
+
+    &:hover {
+        background-color: $darkButton;
+        color: $whiteText;
+    }
+}
+
 // Typo
 
 .handwriting {
