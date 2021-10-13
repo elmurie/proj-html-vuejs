@@ -41,9 +41,11 @@ export default {
                 .text {
                     font-size: 2.8125rem;
                     font-family: 'Lora', serif;
+                    text-align: right;
                 }
                 
                 .input {
+                    margin-left: 3.125rem;
                     width: 90%;
                     border-bottom: 1px solid #808080;
                     
