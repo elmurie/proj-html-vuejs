@@ -1,6 +1,8 @@
 <template>
     <section class="upcoming">
         <h1>Events</h1>
+        <img :src="beigeStain" alt="lines" class="beigeStain">
+        <img :src="circle" alt="lines" class="circle">
         <div class="text text-center">
             <h3 class="handwriting">Upcoming Events</h3>
             <h2>Let's Work Together</h2>
@@ -50,7 +52,9 @@ export default {
                     title : 'Street Performance : Call for Artist',
                     location : 'Illinois, US'
                 },
-            ]
+            ],
+            beigeStain : require('../assets/img/beigeStain.png'),
+            circle : require('../assets/img/maxcoach-shape-13.png'),
 
         }
     }
@@ -62,10 +66,13 @@ export default {
     .upcoming {
         padding-top : 5rem;
         position: relative;
-
+        .circle,
+        .beigeStain,
         h1 {
             position: absolute;
-            bottom: 12%;
+        }
+        h1 {
+            bottom: 30%;
             left: -11%;
             transform: rotateZ(90deg);
             font-family: 'Work Sans', sans-serif;
@@ -73,6 +80,16 @@ export default {
             -webkit-text-stroke-width: 4px;
             -webkit-text-stroke-color: #f5ece4;
             -webkit-text-fill-color: #ffffff;
+        }
+        .beigeStain {
+            width: 20%;
+            top: 11%;
+            right: -8%;
+        }
+        .circle {
+            width: 10%;
+            top: 21%;
+            right: 1%;
         }
     }
 
