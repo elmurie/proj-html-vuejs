@@ -1,7 +1,7 @@
 <template>
     <section class="course-card">
         <div class="course-img">
-            <img class="w-100" :src="require(`../assets/img/artist-course-0${info.img}-480x480.jpg`)" alt="">
+            <img class="w-100" :src="require(`../assets/img/artist-course-0${info.img}-480x480.jpg`)" alt="info.name">
         </div>
         <div class="course-text d-flex flex-column">
             <h5>${{info.price}}</h5>
@@ -10,7 +10,6 @@
                 <li class="availability mx-1"><font-awesome-icon class="icon" :icon="['far', 'file-alt']"/>{{info.lessons}} Lessons</li>
                 <li class="availability mx-1"><font-awesome-icon class="icon" :icon="['far', 'user']"/>{{info.students}} Students</li>
             </ul>
-
         </div>
     </section>
 </template>

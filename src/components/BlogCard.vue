@@ -34,10 +34,12 @@ export default {
         .card-text {
             background-color: #fff;
             padding: 1.625rem 1.25rem 2.1875rem;
+            
             h3 {
                 font-size: 1rem;
             }
             .category {
+                color: #808080;
                 font-size: .9375rem;
             }
             .stats {
