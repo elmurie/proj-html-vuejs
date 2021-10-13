@@ -71,8 +71,7 @@ export default {
         .headShot,
         .diamondDots,
         .painting,
-        .spaceMonkey,
-        .icons {
+        .spaceMonkey {
             position: absolute;
         }
         .bgShapeLeft,
@@ -131,6 +130,8 @@ export default {
             z-index: 5;
         }
         .icons {
+            position: fixed;
+            z-index: 10;
             background-color: #fff;
             right: 0;
             top: 5%;
