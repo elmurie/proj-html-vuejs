@@ -50,6 +50,7 @@ export default {
                     border-bottom: 1px solid #808080;
                     
                     input {
+                        color: #fff;
                         width: 95%;
                         outline: none;
                         background-color: transparent;

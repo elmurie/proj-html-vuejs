@@ -32,9 +32,11 @@ export default {
 
 <style lang="scss" scoped>
     .box {
+        margin: 0 auto;
         width: 80%;
         background-color: #fff;
-        padding: 1.25rem 2.5rem;
+        padding: 2.25rem 2.5rem;
+        border-radius: .625rem;
 
 
         .user-data-img {
@@ -44,6 +46,9 @@ export default {
             .circle-img{
                 border-radius : 50%;
             }
+        }
+        .user-data-role {
+            color : #b4b4b4;
         }
         
     }

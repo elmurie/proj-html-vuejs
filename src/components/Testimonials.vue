@@ -18,9 +18,14 @@
                     <h2>Why do people love me?</h2>
                 </div>
                 <div class="card-area container-fluid">
-                    <ul class="row">
-                        <li class="col-4" v-for="(testimony, i) in testimonialsInfo" :key="i"><TestimonialCard :testimonialsInfo="testimony"/></li>
+                    <ul class="row justify-content-center">
+                        <li @click="brightness(i)" :class="[i == counter ? 'bright' : '', '']" class="col-4" v-for="(testimony, i) in testimonialsInfo" :key="i"><TestimonialCard :testimonialsInfo="testimony"/></li>
                     </ul>
+                    <div class="bullet-wrapper d-flex">
+                        <ul class="bullets d-flex">
+                            <li @click="brightness(i)" :class="[i == counter ? 'bright' : '', '']" v-for="(testimony, i) in testimonialsInfo" :key="i"><font-awesome-icon :icon="['fas', 'circle']"/></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,14 +70,20 @@ export default {
                     description : 'I am happy with their arrangement of lessons and subjects. They reflect a scientific  investigation into effective methods to be adopted for learners of all levels.',
                     avatar : 3	
                 },
-                {
-                    name : 'Florence Themes',
-                    role : 'Multimedia Admin',
-                    title : 'It\'s a choice of quality for people with special needs',
-                    description : 'I\'m a very strict person so I require everything to be organized and neat. Then, I\'ll be able to make things right and shine. MaxCoach guys just got me.',
-                    avatar : 2	
-                },
-            ]
+                // {
+                //     name : 'Florence Themes',
+                //     role : 'Multimedia Admin',
+                //     title : 'It\'s a choice of quality for people with special needs',
+                //     description : 'I\'m a very strict person so I require everything to be organized and neat. Then, I\'ll be able to make things right and shine. MaxCoach guys just got me.',
+                //     avatar : 2	
+                // },
+            ],
+            counter : 1
+        }
+    },
+    methods : {
+        brightness(index) {
+            this.counter = index;
         }
     }
 }
@@ -133,6 +144,35 @@ export default {
             }
             .testimonials-bottom {
                 background-color: #FAF8F6;
+
+                .card-area {
+                    padding: 50px 20px;
+
+                    .row li,
+                    .bullets li {
+                        opacity : .5;
+
+                        &:hover {
+                            cursor : pointer;
+                        }
+
+                        &.bright {
+                            opacity : 1;
+                        }
+                    }
+                    .bullets {
+                        margin: 50px auto;
+
+                        & li {
+                            margin: 0 1.25rem;
+
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                }
             }
             
         }
