@@ -44,6 +44,7 @@ export default {
         .icons {
             .availability {
                 font-size: .9em;
+                color : #808080;
             }
             .icon {
             margin-right: .3em;

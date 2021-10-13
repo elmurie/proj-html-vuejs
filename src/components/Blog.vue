@@ -1,13 +1,20 @@
 <template>
     <section class="blog">
+        <img :src="bgImg" alt="lines" class="bgImgLines w-100">
+        <img :src="diamondDotsGreen" alt="diamondDotsGreen" class="diamondDotsGreen">
+        <img :src="circle" alt="circle" class="circle">
+        <img :src="blueStain" alt="blueStain" class="blueStain">
         <div class="text text-center">
             <h3 class="handwriting">Articles and Tips</h3>
             <h2>Latest From The Blog</h2>
         </div>
         <div class="post-area container">
-            <ul class="row">
-                <li class="col-4" v-for="(post, i) in postInfo" :key="i"><BlogCard :info="post"/></li>
+            <ul class="row justify-content-center">
+                <li class="col-4" v-for="(post, i) in postInfo" :key="i"><BlogCard :info="post" :index="i"/></li>
             </ul>
+            <div class="link-wrapper d-flex">
+                <a href="#">Get into details now? <span>View all posts &#x2192;</span></a>
+            </div>
         </div>
     </section>
 </template>
@@ -37,15 +44,71 @@ export default {
                     views : '1,033',
                     img : 1
                 },
-            ]
+            ],
+            blueStain : require('../assets/img/blueStain.png'),
+            circle : require('../assets/img/circle_shape.png'),
+            diamondDotsGreen : require('../assets/img/maxcoach-shape-05.png'),
+            bgImg : require('../assets/img/maxcoach-shape-03.png')
         } 
     }
 }
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/style/common.scss';
     .blog {
+        position: relative;
         background-color: #F5F7FA;
+        padding : 5.625rem 0rem 4.25rem 0rem;
+        .bgImgLines,
+        .diamondDotsGreen,
+        .blueStain,
+        .circle {
+            position: absolute;
+        }
+        .bgImgLines {
+            z-index: 0;
+            top: 26%;
+        }
+        .diamondDotsGreen {
+            z-index: 0;
+            top: 23%;
+            left: 33%;
+        }
+        .blueStain {
+            width: 10%;
+            bottom: 15%;
+            right: 32%;
+        }
+        .circle {
+            width: 5%;
+            top: 9%;
+            left: 10%;
+        }
+        .post-area {
+            margin-top: 5rem;
+            ul {
+                li:nth-child(1) {
+                    margin: 162px 0 0;
+                }
+                li:nth-child(2) {
+                    width : 40%;
+                }
+                li:nth-child(3) {
+                    margin: 55px 0 0;
+                }
+                li:nth-child(odd) {
+                    width: 20%;
+                }
+            }
+        }
+        a {
+            font-weight: 600;
+            color: #8C89A2;;
+            margin : 5rem auto;
+            span {
+                color : $darkButton;
+            }
+        }
     }
-
 </style>
