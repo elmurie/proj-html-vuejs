@@ -106,7 +106,6 @@ export default {
 .latest-online-courses {
     position: relative;
     margin-top: 3.5rem;
-    height: 100vh;
     .bgShapeRight,
     .bgShapeLeft,
     h1 {
