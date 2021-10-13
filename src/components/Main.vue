@@ -4,8 +4,8 @@
         <Services/>
         <Mission/>
         <Testimonials/>
-        <Courses/>
         <Latest/>
+        <Blog/>
         <Upcoming/>
         <Newsletter/>
     </main>
@@ -16,8 +16,8 @@ import Hero from './Hero.vue';
 import Services from './Services.vue';
 import Mission from './Mission.vue';
 import Testimonials from './Testimonials.vue';
-import Courses from './Courses.vue';
 import Latest from './Latest.vue';
+import Blog from './Blog.vue';
 import Upcoming from './Upcoming.vue';
 import Newsletter from './Newsletter.vue';
 
@@ -31,7 +31,7 @@ export default {
         Services,
         Mission,
         Testimonials,
-        Courses,
+        Blog,
         Latest,
         Upcoming,
         Newsletter

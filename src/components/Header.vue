@@ -60,6 +60,8 @@ export default {
             }
         }
         .header-bottom {
+            position: sticky;
+            top : 0;
             .links {
                 & .text {
                     font-weight: 500;
