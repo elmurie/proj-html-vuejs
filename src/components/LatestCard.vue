@@ -1,6 +1,6 @@
 <template>
     <section class="course-card">
-        <div class="course-img">
+        <div class="course-img zoom">
             <img class="w-100" :src="require(`../assets/img/artist-course-0${info.img}-480x480.jpg`)" alt="info.name">
         </div>
         <div class="course-text d-flex flex-column">
@@ -30,6 +30,15 @@ export default {
         background-color: transparent;
         max-width: calc(100% - 1.875rem);
         padding: 1.5rem 1.5625rem 1.75rem;
+        transition: transform 1s ease;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #fff;
+            box-shadow: inset 0px 0px 0px 3px $darkButton;
+            transform: translateY(-50%);
+        }
+
         h3 {
             font-size: 1.1875rem;
             line-height: 1.5

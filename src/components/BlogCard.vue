@@ -1,6 +1,6 @@
 <template>
     <div :class="[index == 1 ? 'big' : '', '']" class="card-blog">
-        <div class="card-img">
+        <div class="card-img zoom">
             <img class="w-100" :src="require(`../assets/img/artist-blog-0${info.img}.jpg`)" alt="info.title">
         </div>
         <div class="card-text">

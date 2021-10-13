@@ -84,8 +84,13 @@ export default {
                     color: #b4b4b4;
                     font-size : 1.5rem;
 
+                    
+
                     a {
                         margin-right : 1em;
+                        &:hover {
+                        color: $darkButton;
+                        }
                     }
                 }
             }
@@ -109,6 +114,14 @@ export default {
                 li {
                     padding : 0 15px 0 0;
                 }
+            }
+            img {
+                transition: 1s ease;
+            }
+            img:hover {
+                cursor: pointer;
+                filter: grayscale(100%);
+                -webkit-filter: grayscale(100%);
             }
 
         }

@@ -7,8 +7,8 @@
                 <img :src="circle" alt="YouTube Icon" class="circle">
                 <img :src="diamondDots" alt="Diamond" class="diamondDots">
                 <img :src="diamondDotsGreen" alt="Diamond" class="diamondDotsGreen">
-                <div class="poster">
-                    <img :src="centerImg" alt="Artist Poster">
+                <div class="poster zoom">
+                    <img class="" :src="centerImg" alt="Artist Poster">
                     <img :src="youtube" alt="YouTube Icon" class="iconYT">
                 </div>
             </div>
