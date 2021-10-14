@@ -4,20 +4,20 @@
             <div class="left d-flex justify-content-between align-items-start">
                 <div class="address">
                     <ul>
-                        <li v-for="(addressLink, index) in links.address" :key="index">{{addressLink}}</li>
+                        <li v-for="(addressLink, index) in links.links.address" :key="index">{{addressLink}}</li>
                     </ul>
                     <div class="icons">
-                        <a href="#" v-for="(iconLink, index) in links.icons" :key="index"><font-awesome-icon :icon="['fab', iconLink]"/></a>
+                        <a href="#" v-for="(iconLink, index) in links.links.icons" :key="index"><font-awesome-icon :icon="['fab', iconLink]"/></a>
                     </div>
                 </div>
                 <div class="explore">
                     <ul>
-                        <li v-for="(exploreLink, index) in links.explore" :key="index"><a href="#">{{exploreLink}}</a></li>
+                        <li v-for="(exploreLink, index) in links.links.explore" :key="index"><a href="#">{{exploreLink}}</a></li>
                     </ul>
                 </div>
                 <div class="info">
                     <ul>
-                        <li v-for="(infoLink, index) in links.info" :key="index"><a href="#">{{infoLink}}</a></li>
+                        <li v-for="(infoLink, index) in links.links.info" :key="index"><a href="#">{{infoLink}}</a></li>
                     </ul>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                 </div>
                 <div class="bottom container">
                     <ul class="row">
-                        <li class="col-4" v-for="(instagram, index) in links.igImg" :key="index"><img class="w-100" :src="instagram" alt="IG pic"></li>
+                        <li class="col-4" v-for="(instagram, index) in links.links.igImg" :key="index"><img class="w-100" :src="instagram" alt="IG pic"></li>
                     </ul>
                     
                 </div>
@@ -44,29 +44,14 @@
 <script>
 export default {
     name : "Footer",
-    data() {
-        return {
-            links : {
-                address : ['Address', '382 NE 191st St # 87394 Miami, FL 33179-3899', '+1 (305) 547-9909 (9am - 5pm EST, Monday - Friday)', 'support@maxcoach.com'],
-                icons : ['facebook-square', 'twitter', 'instagram', 'linkedin'],
-                explore: ['Explore', 'Start here', 'Success story', 'Blog', 'Courses', 'Contact us'],
-                info : ['Information', 'Membership', 'Purchase guide', 'Privacy policy', 'Terms of services'],
-                igImg : [
-                    require("../assets/img/footer-1.jpg"), 
-                    require("../assets/img/footer-2.jpg"), 
-                    require("../assets/img/footer-2.jpg"), 
-                ]
-                
-            }
-        }
-    }
+    props : ['links']
 }
 </script>
 
 <style lang="scss" scoped>
 @import '../assets/style/common.scss';
     footer {
-        padding: 6.3125rem 0 3.125rem 0;
+        padding: 6.3125rem 0 3.125rem 6.25rem;
         .left {
             padding: 20px;
             width: 95%;
