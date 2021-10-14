@@ -4,7 +4,7 @@
             <div class="mission container">
                 <div class="row">
                     <div class="col-6 text-center">
-                        <kinesis-element class="quoteIcon mb-4" :strength="30">
+                        <kinesis-element class="quoteIcon" :strength="30">
                             <img :src="quoteIcon" alt="Quote Icon" class="quoteIcon mb-4">
                         </kinesis-element>
                         <h2>I coach and mentor visual artists, like you, to Create Like You Mean It</h2>
@@ -43,6 +43,9 @@ section {
         .col-6 p {
             margin-top: 3.625rem;
             margin-bottom: 1.8rem;
+        }
+        .quoteIcon {
+            margin-bottom : .4375rem;
         }
     }
 
