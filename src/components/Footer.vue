@@ -74,6 +74,10 @@ export default {
             width: 95%;
             li {
                 line-height: 2.5rem;
+
+                &:hover {
+                    color : $darkButton;
+                }
             }
             li:first-child {
                 font-weight: 600;

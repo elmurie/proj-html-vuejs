@@ -28,6 +28,7 @@ export default {
 
 <style lang="scss" scoped>
     .newsletter {
+        margin-top : 3.125rem;
         background-color: #244186;
         .wrapper {
             width: 100%;

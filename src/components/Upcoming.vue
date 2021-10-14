@@ -105,7 +105,7 @@ export default {
             right: 1%;
         }
         .bgShapeLeft {
-            bottom : 70%;
+            bottom : 8%;
             left : -15%;
             z-index: -1;
         }
