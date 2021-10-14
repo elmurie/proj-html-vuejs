@@ -30,13 +30,13 @@ export default {
         background-color: transparent;
         max-width: calc(100% - 1.875rem);
         padding: 1.5rem 1.5625rem 1.75rem;
-        transition: transform 1s ease;
+        transition: all 1s ease;
 
         &:hover {
             cursor: pointer;
             background-color: #fff;
             box-shadow: inset 0px 0px 0px 3px $darkButton;
-            transform: translateY(-50%);
+            transform: translateY(-30%);
         }
 
         h3 {
