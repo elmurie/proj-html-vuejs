@@ -58,7 +58,8 @@ export default {
             li {
                 line-height: 2.5rem;
 
-                &:hover {
+                &:hover,
+                & a:hover {
                     color : $darkButton;
                 }
             }
