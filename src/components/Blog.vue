@@ -1,22 +1,30 @@
 <template>
-    <section class="blog">
-        <img :src="bgImg" alt="lines" class="bgImgLines w-100">
-        <img :src="diamondDotsGreen" alt="diamondDotsGreen" class="diamondDotsGreen">
-        <img :src="circle" alt="circle" class="circle">
-        <img :src="blueStain" alt="blueStain" class="blueStain">
-        <div class="text text-center">
-            <h3 class="handwriting">Articles and Tips</h3>
-            <h2>Latest From The Blog</h2>
-        </div>
-        <div class="post-area container">
-            <ul class="row justify-content-center">
-                <li class="col-4" v-for="(post, i) in postInfo" :key="i"><BlogCard :info="post" :index="i"/></li>
-            </ul>
-            <div class="link-wrapper d-flex">
-                <a href="#">Get into details now? <span>View all posts &#x2192;</span></a>
+    <kinesis-container>
+        <section class="blog">
+            <img :src="bgImg" alt="lines" class="bgImgLines w-100">
+            <kinesis-element class="diamondDotsGreen" :strength="-150">
+                <img :src="diamondDotsGreen" alt="diamondDotsGreen" class="diamondDotsGreen">
+            </kinesis-element>
+            <kinesis-element class="circle" :strength="150" >
+                <img :src="circle" alt="circle" class="circle">
+            </kinesis-element>
+            <kinesis-element class="blueStain" :strength="150">
+                <img :src="blueStain" alt="blueStain" class="blueStain">
+            </kinesis-element>
+            <div class="text text-center">
+                <h3 class="handwriting">Articles and Tips</h3>
+                <h2>Latest From The Blog</h2>
             </div>
-        </div>
-    </section>
+            <div class="post-area container">
+                <ul class="row justify-content-center">
+                    <li class="col-4" v-for="(post, i) in postInfo" :key="i"><BlogCard :info="post" :index="i"/></li>
+                </ul>
+                <div class="link-wrapper d-flex">
+                    <a href="#">Get into details now? <span>View all posts &#x2192;</span></a>
+                </div>
+            </div>
+        </section>
+    </kinesis-container>
 </template>
 
 <script>
@@ -76,14 +84,14 @@ export default {
             left: 33%;
         }
         .blueStain {
-            width: 10%;
-            bottom: 15%;
-            right: 32%;
+            width: 33%;
+            bottom: 12%;
+            right: 24%;
         }
         .circle {
-            width: 5%;
-            top: 9%;
-            left: 10%;
+            width: 22%;
+            top: 19%;
+            left: 14%;
         }
         .post-area {
             margin-top: 5rem;

@@ -1,35 +1,45 @@
 <template>
-    <section>
-        <div class="testimonials container-fluid">
-            <div class="testimonials-top d-flex justify-content-center">
-                <img :src="wave" alt="Wave" class="wave">
-                <img :src="blueStain" alt="Blue Stain" class="blueStain">
-                <img :src="circle" alt="YouTube Icon" class="circle">
-                <img :src="diamondDots" alt="Diamond" class="diamondDots">
-                <img :src="diamondDotsGreen" alt="Diamond" class="diamondDotsGreen">
-                <div class="poster zoom">
-                    <img class="" :src="centerImg" alt="Artist Poster">
-                    <img :src="youtube" alt="YouTube Icon" class="iconYT">
+    <kinesis-container>
+        <section>
+            <div class="testimonials container-fluid">
+                <div class="testimonials-top d-flex justify-content-center">
+                    <img :src="wave" alt="Wave" class="wave">
+                    <kinesis-element class="blueStain" :strength="150">
+                        <img :src="blueStain" alt="Blue Stain" class="blueStain">
+                    </kinesis-element>
+                    <kinesis-element class="circle" :strength="150">
+                        <img :src="circle" alt="YouTube Icon" class="circle">
+                    </kinesis-element>
+                    <kinesis-element class="diamondDots" :strength="-150">
+                        <img :src="diamondDots" alt="Diamond" class="diamondDots">
+                    </kinesis-element>
+                    <kinesis-element class="diamondDotsGreen" :strength="-150">
+                        <img :src="diamondDotsGreen" alt="Diamond" class="diamondDotsGreen">
+                    </kinesis-element>
+                    <div class="poster zoom">
+                        <img class="" :src="centerImg" alt="Artist Poster">
+                        <img :src="youtube" alt="YouTube Icon" class="iconYT">
+                    </div>
                 </div>
-            </div>
-            <div class="testimonials-bottom">
-                <div class="text text-center">
-                    <h3 class="handwriting">Testimonials</h3>
-                    <h2>Why do people love me?</h2>
-                </div>
-                <div class="card-area container-fluid">
-                    <ul class="row justify-content-center">
-                        <li @click="brightness(i)" :class="[i == counter ? 'bright' : '', '']" class="col-4" v-for="(testimony, i) in testimonialsInfo" :key="i"><TestimonialCard :testimonialsInfo="testimony"/></li>
-                    </ul>
-                    <div class="bullet-wrapper d-flex">
-                        <ul class="bullets d-flex">
-                            <li @click="brightness(i)" :class="[i == counter ? 'bright' : '', '']" v-for="(testimony, i) in testimonialsInfo" :key="i"><font-awesome-icon :icon="['fas', 'circle']"/></li>
+                <div class="testimonials-bottom">
+                    <div class="text text-center">
+                        <h3 class="handwriting">Testimonials</h3>
+                        <h2>Why do people love me?</h2>
+                    </div>
+                    <div class="card-area container-fluid">
+                        <ul class="row justify-content-center">
+                            <li @click="brightness(i)" :class="[i == counter ? 'bright' : '', '']" class="col-4" v-for="(testimony, i) in testimonialsInfo" :key="i"><TestimonialCard :testimonialsInfo="testimony"/></li>
                         </ul>
+                        <div class="bullet-wrapper d-flex">
+                            <ul class="bullets d-flex">
+                                <li @click="brightness(i)" :class="[i == counter ? 'bright' : '', '']" v-for="(testimony, i) in testimonialsInfo" :key="i"><font-awesome-icon :icon="['fas', 'circle']"/></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </kinesis-container>
 </template>
 
 <script>
@@ -108,27 +118,27 @@ export default {
                     height: 100%;
                 }
                 .blueStain {
-                    width: 10%;
-                    top: -5%;
-                    left: 17%;
+                    width: 35%;
+                    top: -7%;
+                    left: 12%;
                     z-index: -1;
                 }
                 .circle {
-                    width: 4%;
-                    top: 19%;
-                    right: 21.5%;
+                    width: 24%;
+                    top: 14%;
+                    right: 14.5%;
                     z-index: 5;
                 }
                 .diamondDots {
-                    width: 10%;
-                    top: -5%;
-                    left: 17%;
-                    z-index: -1;
+                    width: 30%;
+                    bottom: -9%;
+                    right: 15%;
+                    z-index: 0;
                 }
                 .diamondDotsGreen {
-                    width: 8%;
-                    bottom: 13%;
-                    right: 19%;
+                    width: 32%;
+                    top: -1%;
+                    left: 13%;
                     z-index: 0;
                 }
                 .poster {

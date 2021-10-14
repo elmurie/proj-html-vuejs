@@ -1,20 +1,29 @@
 <template>
-    <section class="upcoming">
-        <h1>Events</h1>
-        <img :src="beigeStain" alt="lines" class="beigeStain">
-        <img :src="circle" alt="lines" class="circle">
-        <div class="text text-center">
-            <h3 class="handwriting">Upcoming Events</h3>
-            <h2>Let's Work Together</h2>
-        </div>
-        <div class="events-area container">
-            <ul class="row justify-content-center">
-                <li class="col-5 my-3" v-for="(event, i) in eventsInfo" :key="i">
-                    <UpcomingCard :info="event" :index="i"/>
-                </li>
-            </ul>
-        </div>
-    </section>
+    <kinesis-container>
+        <section class="upcoming">
+            <h1>Events</h1>
+                <kinesis-element class="beigeStain" :strength="150">
+                    <img :src="beigeStain" alt="lines" class="beigeStain">
+                </kinesis-element>
+                <kinesis-element class="circle" :strength="-150">
+                    <img :src="circle" alt="lines" class="circle">
+                </kinesis-element>
+                <kinesis-element class="bgShapeLeft" :strength="150">
+                    <img :src="bgShapeLeft" alt="lines" class="bgShapeLeft">
+                </kinesis-element>
+            <div class="text text-center">
+                <h3 class="handwriting">Upcoming Events</h3>
+                <h2>Let's Work Together</h2>
+            </div>
+            <div class="events-area container">
+                <ul class="row justify-content-center">
+                    <li class="col-5 my-3" v-for="(event, i) in eventsInfo" :key="i">
+                        <UpcomingCard :info="event" :index="i"/>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </kinesis-container>
 </template>
 
 <script>
@@ -55,6 +64,7 @@ export default {
             ],
             beigeStain : require('../assets/img/beigeStain.png'),
             circle : require('../assets/img/maxcoach-shape-13.png'),
+            bgShapeLeft : require('../assets/img/artist-shape-01-600x577.png'),
 
         }
     }
@@ -68,6 +78,7 @@ export default {
         position: relative;
         .circle,
         .beigeStain,
+        .bgShapeLeft,
         h1 {
             position: absolute;
         }
@@ -80,16 +91,23 @@ export default {
             -webkit-text-stroke-width: 4px;
             -webkit-text-stroke-color: #f5ece4;
             -webkit-text-fill-color: #ffffff;
+            z-index: -2;
         }
         .beigeStain {
-            width: 20%;
+            width: 44%;
             top: 11%;
-            right: -8%;
+            right: -4%;
+            opacity: 0.7;
         }
         .circle {
-            width: 10%;
+            width: 32%;
             top: 21%;
             right: 1%;
+        }
+        .bgShapeLeft {
+            bottom : 70%;
+            left : -15%;
+            z-index: -1;
         }
     }
 

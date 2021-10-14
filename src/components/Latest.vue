@@ -1,23 +1,29 @@
 <template>
-    <section class="latest-online-courses">
-        <h1>Courses</h1>
-        <img class="bgShapeRight" :src="bgShapeRight" alt="Shape">
-        <img class="bgShapeLeft" :src="bgShapeLeft" alt="Shape">
-        <div class="text text-center">
-            <h3 class="handwriting">Artist Coaching</h3>
-            <h2>Latest Online Courses</h2>
-        </div>
-        <div class="card-area container">
-            <ul class="row">
-                <li class="col-3" v-for="(course, i) in coursesInfo" :key="i">
-                    <LatestCard :info="course"/>
-                </li>
-            </ul>
-            <div class="button-wrapper d-flex">
-                <button class="btn large light-button">View all courses &#x2192;</button>
+    <kinesis-container>
+        <section class="latest-online-courses">
+            <h1>Courses</h1>
+            <kinesis-element class="bgShapeRight" maxY="100" :strength="150">
+                <img class="bgShapeRight" :src="bgShapeRight" alt="Shape">
+            </kinesis-element>
+            <kinesis-element class="bgShapeLeft" maxY="100" :strength="-150">
+                <img class="bgShapeLeft" :src="bgShapeLeft" alt="Shape">
+            </kinesis-element>
+            <div class="text text-center">
+                <h3 class="handwriting">Artist Coaching</h3>
+                <h2>Latest Online Courses</h2>
             </div>
-        </div>
-    </section>
+            <div class="card-area container">
+                <ul class="row">
+                    <li class="col-3" v-for="(course, i) in coursesInfo" :key="i">
+                        <LatestCard :info="course"/>
+                    </li>
+                </ul>
+                <div class="button-wrapper d-flex">
+                    <button class="btn large light-button">View all courses &#x2192;</button>
+                </div>
+            </div>
+        </section>
+    </kinesis-container>
 </template>
 
 <script>
@@ -113,15 +119,17 @@ export default {
         z-index: -2;
     }
     .bgShapeRight {
-        right: -7%;
-        transform: rotateX(180deg);
         z-index: -1;
+        width: 50%;
+        top: 8%;
+        right: -6%;
+        
     }
     .bgShapeLeft {
-        left: -13%;
-        top: 24%;
+        left: -3%;
+        top: 44%;
         z-index: -10;
-        opacity: .2;
+        opacity: 0.5;
     }
     h1 {
         top: 40%;

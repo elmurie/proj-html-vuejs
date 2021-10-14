@@ -1,29 +1,37 @@
 <template>
-    <section class="hero d-flex justify-content-center align-items-center">
-        <div class="text text-center">
-            <h3 class="handwriting">Hello, Im Martin</h3>
-            <h1>Artist Coaching And Mentoring Might Be for You.</h1>
-            <button class="btn large dark-button">Get started today</button>
-        </div>
-        <img :src="bgShapeLeft" alt="Shape Left" class="bgShapeLeft">
-        <img :src="bgShapeRight" alt="Shape Right" class="bgShapeRight">
-        <img :src="blueStain" alt="Blue Stain" class="blueStain">
-        <img :src="yellowStain" alt="Yellow Stain" class="yellowStain">
-        <img :src="dots" alt="Dots" class="dots">
-        <img :src="leaf" alt="Leaf" class="leaf">
-        <img :src="brushStroke" alt="Brush Stroke" class="brushStroke">
-        <img :src="headOutline" alt="Head Outline" class="headOutline">
-        <img :src="headShot" alt="Head Shot" class="headShot">
-        <img :src="diamondDots" alt="Diamond Dots" class="diamondDots">
-        <img :src="painting" alt="Painting" class="painting">
-        <img :src="spaceMonkey" alt="Space Monkey" class="spaceMonkey">
-        <ul class="icons d-flex flex-column align-items-center">
-            <li><font-awesome-icon :icon="['fas', 'ruler-combined']"/></li>
-            <li><font-awesome-icon :icon="['far', 'life-ring']"/></li>
-            <li><font-awesome-icon :icon="['fas', 'book']"/></li>
-            <li><font-awesome-icon :icon="['fas', 'shopping-cart']"/></li>
-        </ul>
-    </section>
+    <kinesis-container>
+        <section class="hero d-flex justify-content-center align-items-center">
+            <div class="text text-center">
+                <h3 class="handwriting">Hello, Im Martin</h3>
+                <h1>Artist Coaching And Mentoring Might Be for You.</h1>
+                <button class="btn large dark-button">Get started today</button>
+            </div>
+            <img :src="bgShapeLeft" alt="Shape Left" class="bgShapeLeft">
+            <img :src="bgShapeRight" alt="Shape Right" class="bgShapeRight">
+            <img :src="blueStain" alt="Blue Stain" class="blueStain">
+            <img :src="yellowStain" alt="Yellow Stain" class="yellowStain">
+            <img :src="dots" alt="Dots" class="dots">
+            <img :src="leaf" alt="Leaf" class="leaf">
+            <img :src="brushStroke" alt="Brush Stroke" class="brushStroke">
+            <img :src="headOutline" alt="Head Outline" class="headOutline">
+            <img :src="diamondDots" alt="Diamond Dots" class="diamondDots">
+            <kinesis-element :strength="-70" class="painting">
+                <img :src="painting" alt="Painting" class="painting">
+            </kinesis-element>
+            <kinesis-element :strength="70" class="headShot">
+                <img :src="headShot" alt="Head Shot" class="headShot">
+            </kinesis-element>
+            <kinesis-element class="spaceMonkey" :strength="150">
+                <img :src="spaceMonkey" alt="Space Monkey" class="spaceMonkey">
+            </kinesis-element>
+            <ul class="icons d-flex flex-column align-items-center">
+                <li><font-awesome-icon :icon="['fas', 'ruler-combined']"/></li>
+                <li><font-awesome-icon :icon="['far', 'life-ring']"/></li>
+                <li><font-awesome-icon :icon="['fas', 'book']"/></li>
+                <li><font-awesome-icon :icon="['fas', 'shopping-cart']"/></li>
+            </ul>
+        </section>
+    </kinesis-container>
 </template>
 
 <script>
@@ -39,9 +47,9 @@ export default {
             leaf : require('../assets/img/artist-shape-04-127x300.png'),
             brushStroke : require('../assets/img/artist-shape-05-300x198.png'), 
             headOutline : require('../assets/img/artist-hero-image-03-204x300.png'),
-            headShot : require('../assets/img/artist-hero-image-04-235x300.jpg'),
+            headShot : require('../assets/img/artist-hero-image-04.jpg'),
             diamondDots : require('../assets/img/maxcoach-shape-12.png'),
-            painting : require('../assets/img/artist-hero-image-02-232x300.jpg'), 
+            painting : require('../assets/img/artist-hero-image-02.jpg'), 
             spaceMonkey : require('../assets/img/artist-hero-image-01.jpg'),
         }
     }
@@ -84,6 +92,7 @@ export default {
             left: 0;
         }
         .bgShapeRight {
+            height: 90%;
             right: 5%;
         }
         .blueStain {
@@ -91,8 +100,9 @@ export default {
             bottom: 15%;
         }
         .yellowStain {
+            width: 13%;
             right: 17%;
-            bottom: 33%;
+            bottom: 16%;
         }
         .dots {
             top: 15%;
@@ -103,25 +113,26 @@ export default {
         }
         .brushStroke {
             right: 5%;
-            bottom: 27%;
+            bottom: 12%;
         }
         .headOutline {
             bottom: 6%;
             left: 26%;
         }
         .headShot {
-            bottom: 27%;
-            right: 13%;
+            width: 40%;
+            bottom: 15%;
+            right: 8%;
             z-index: 5;
         }
         .diamondDots {
-            bottom: 25%;
-            right: 15%;
+            bottom: 12%;
+            right: 19%;
 
         }
         .painting {
-            top: 16%;
-            left: 16%;
+            top: 8%;
+            left: 12%;
             z-index: 4;
         }
         .spaceMonkey {

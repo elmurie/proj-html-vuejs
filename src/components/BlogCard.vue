@@ -66,6 +66,9 @@ export default {
             bottom : 0;
             background-color: transparent;
 
+            span {
+                color : #fff;
+            }
             h3 {
                 font-size: 2.125rem;
             }

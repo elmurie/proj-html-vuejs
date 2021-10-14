@@ -13,6 +13,18 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add( faClock, faTwitter, faFacebookF, faInstagram, faLinkedin, faLifeRing, faRulerCombined, faBook, faShoppingCart, faFileAlt, faUser, faCalendar, faEye, faMapMarkerAlt, faFacebookSquare, faChevronDown, faCircle )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+//---------------------------------------
+
+//vue kinesis
+import VueKinesis from 'vue-kinesis'
+
+Vue.use(VueKinesis)
+
+import { KinesisContainer, KinesisElement } from 'vue-kinesis'
+
+Vue.component('kinesis-container', KinesisContainer)
+Vue.component('kinesis-element', KinesisElement)
+//---------------------------------------
 
 Vue.config.productionTip = false
 
