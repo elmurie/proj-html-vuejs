@@ -39,7 +39,6 @@ export default {
               require("./assets/img/footer-2.jpg"), 
               require("./assets/img/footer-3.jpg"), 
           ]
-                
         }
       }
     }
