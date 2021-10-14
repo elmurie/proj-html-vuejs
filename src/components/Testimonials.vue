@@ -164,6 +164,7 @@ export default {
 
                         &:hover {
                             cursor : pointer;
+                            opacity: 1;
                         }
 
                         &.bright {
