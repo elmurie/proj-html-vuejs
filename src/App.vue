@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header/>
+    <Header :links="headerLinks"/>
     <Main/>
     <Footer/>
   </div>
@@ -20,6 +20,15 @@ export default {
   },
   created(){
     document.title = "MaxCoach"
+  },
+  data() {
+    return {
+      headerLinks : {
+        links : ['Home', 'Pages', 'Courses', 'Features', 'Blog', 'Shop'],
+        icons : ['twitter', 'facebook-f', 'instagram', 'linkedin'],
+        logoImg : require('./assets/img/dark-logo.png')
+      }
+    }
   }
 }
 </script>
