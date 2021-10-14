@@ -4,35 +4,20 @@
             <div class="left d-flex justify-content-between align-items-start">
                 <div class="address">
                     <ul>
-                        <li>Address</li>
-                        <li>382 NE 191st St # 87394 Miami, FL 33179-3899</li>
-                        <li>+1 (305) 547-9909 (9am - 5pm EST, Monday - Friday)</li>
-                        <li><a href="mailto:support@maxcoach.com">support@maxcoach.com</a></li>
+                        <li v-for="(addressLink, index) in links.address" :key="index">{{addressLink}}</li>
                     </ul>
                     <div class="icons">
-                        <a href="#"><font-awesome-icon :icon="['fab', 'facebook-square']"/></a>
-                        <a href="#"><font-awesome-icon :icon="['fab', 'twitter']"/></a>
-                        <a href="#"><font-awesome-icon :icon="['fab', 'instagram']"/></a>
-                        <a href="#"><font-awesome-icon :icon="['fab', 'linkedin']"/></a>
+                        <a href="#" v-for="(iconLink, index) in links.icons" :key="index"><font-awesome-icon :icon="['fab', iconLink]"/></a>
                     </div>
                 </div>
                 <div class="explore">
                     <ul>
-                        <li>Explore</li>
-                        <li><a href="#">Start here</a></li>
-                        <li><a href="#">Success story</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Courses</a></li>
-                        <li><a href="#">Contact us</a></li>
+                        <li v-for="(exploreLink, index) in links.explore" :key="index"><a href="#">{{exploreLink}}</a></li>
                     </ul>
                 </div>
                 <div class="info">
                     <ul>
-                        <li>Information</li>
-                        <li><a href="#">Membership</a></li>
-                        <li><a href="#">Purchase guide</a></li>
-                        <li><a href="#">Privacy policy</a></li>
-                        <li><a href="#">Terms of services</a></li>
+                        <li v-for="(infoLink, index) in links.info" :key="index"><a href="#">{{infoLink}}</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,9 +28,7 @@
                 </div>
                 <div class="bottom container">
                     <ul class="row">
-                        <li class="col-4"><img class="w-100" src="../assets/img/footer-1.jpg" alt=""></li>
-                        <li class="col-4"><img class="w-100" src="../assets/img/footer-2.jpg" alt=""></li>
-                        <li class="col-4"><img class="w-100" src="../assets/img/footer-3.jpg" alt=""></li>
+                        <li class="col-4" v-for="(instagram, index) in links.igImg" :key="index"><img class="w-100" :src="instagram" alt="IG pic"></li>
                     </ul>
                     
                 </div>
@@ -60,7 +43,23 @@
 
 <script>
 export default {
-    name : "Footer"
+    name : "Footer",
+    data() {
+        return {
+            links : {
+                address : ['Address', '382 NE 191st St # 87394 Miami, FL 33179-3899', '+1 (305) 547-9909 (9am - 5pm EST, Monday - Friday)', 'support@maxcoach.com'],
+                icons : ['facebook-square', 'twitter', 'instagram', 'linkedin'],
+                explore: ['Explore', 'Start here', 'Success story', 'Blog', 'Courses', 'Contact us'],
+                info : ['Information', 'Membership', 'Purchase guide', 'Privacy policy', 'Terms of services'],
+                igImg : [
+                    require("../assets/img/footer-1.jpg"), 
+                    require("../assets/img/footer-2.jpg"), 
+                    require("../assets/img/footer-2.jpg"), 
+                ]
+                
+            }
+        }
+    }
 }
 </script>
 
@@ -68,7 +67,6 @@ export default {
 @import '../assets/style/common.scss';
     footer {
         padding: 6.3125rem 0 3.125rem 0;
-
         .left {
             padding: 20px;
             width: 95%;
@@ -81,9 +79,19 @@ export default {
             }
             li:first-child {
                 font-weight: 600;
+
+                &:hover,
+                & a:hover {
+                    color: #000;
+                    cursor: auto;
+                }
             }
 
             .address {
+                
+                & li:last-child:hover {
+                    cursor: pointer;
+                }
                 .icons {
                     color: #b4b4b4;
                     font-size : 1.5rem;
