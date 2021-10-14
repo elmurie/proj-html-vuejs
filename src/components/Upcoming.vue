@@ -74,6 +74,9 @@ export default {
 
 <style lang="scss" scoped>
     .upcoming {
+        .text {
+            margin-bottom: 1.875rem;
+        }
         padding-top : 5rem;
         position: relative;
         .circle,
