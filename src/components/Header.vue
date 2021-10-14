@@ -20,7 +20,7 @@
             <div class="icons w-25 d-flex justify-content-end">
                 <ul class="d-flex justify-content-center align-items-center">
                     <li v-for="(icon, index) in links.icons" :key="index" class="d-flex justify-content-center align-items-center mx-3">
-                        <font-awesome-icon :icon="['fab', `${icon}`]"/>
+                        <a href="#"><font-awesome-icon :icon="['fab', `${icon}`]"/></a>
                     </li>
                 </ul>
             </div>
@@ -41,6 +41,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/style/common.scss';
+
     header {
         .header-top{
             color: #8D807C;
@@ -63,10 +65,18 @@ export default {
                 & svg {
                     font-size: .7em;
                 }
+                
+                & li:hover {
+                    color: $darkButton;
+                    cursor: pointer;
+                }
             }
             .icons {
                 color: #696969;
                 font-size: 1.2em;
+                & li a:hover {
+                    color: $darkButton;
+                }
             }
         
         }
