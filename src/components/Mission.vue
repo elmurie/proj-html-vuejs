@@ -33,20 +33,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-section {
-        height: 50vh;
-        .col-6 h2 {
-            width: 50%;
-            margin: 0 auto;
-            line-height: 2.9375rem;
-        }
-        .col-6 p {
-            margin-top: 3.625rem;
-            margin-bottom: 1.8rem;
-        }
-        .quoteIcon {
-            margin-bottom : .4375rem;
-        }
+@import '../assets/style/variables.scss';
+    section {
+            height: 50vh;
+            .col-6 h2 {
+                width: 50%;
+                margin: 0 auto;
+                line-height: 2.9375rem;
+            }
+            .col-6 p {
+                margin-top: 3.625rem;
+                margin-bottom: 1.8rem;
+            }
+            .quoteIcon {
+                margin-bottom : .4375rem;
+            }
     }
 
 </style>

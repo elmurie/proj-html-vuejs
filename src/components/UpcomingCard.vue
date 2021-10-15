@@ -26,25 +26,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/style/variables.scss';
     .card-text {
         padding-right: .3125rem; 
         width: 95%;
         span {
-            color : #808080;
+            color : $smallerTextColor;
         }
         h5 {
             margin : .5em 0;
         }
 
         .location {
-            color : #808080;
+            color : $smallerTextColor;
             font-size: .875rem;
             .icon {
                 margin-right : .4em;
             }
         }
     }
-
-    
-
 </style>

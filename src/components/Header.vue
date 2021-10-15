@@ -41,13 +41,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/style/common.scss';
+@import '../assets/style/variables.scss';
 
     header {
         .header-top{
-            color: #8D807C;
-            padding: 5px;
-            background-color: #F5F5F5;
+            color: $headerTopText;
+            padding: .3125rem;
+            background-color: $headerTopBGC;
             & .clock {
                 width: 8.3125rem;
             }
@@ -67,15 +67,15 @@ export default {
                 }
                 
                 & li:hover {
-                    color: $darkButton;
+                    color: $mainAccentColor;
                     cursor: pointer;
                 }
             }
             .icons {
-                color: #696969;
+                color: $headerIconsColor;
                 font-size: 1.2em;
                 & li a:hover {
-                    color: $darkButton;
+                    color: $mainAccentColor;
                 }
             }
         

@@ -57,6 +57,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/style/variables.scss';
     section {
         position: relative;
         .bgImgLines,
@@ -94,7 +95,7 @@ export default {
             }
             &-items li p {
                 font-size: .8125rem;
-                color: #8D807C;
+                color: $smallerTextColor;
             }
             &-items li:nth-child(even) {
                 margin: auto 0 0 0;

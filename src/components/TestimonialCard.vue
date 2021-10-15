@@ -31,10 +31,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/style/variables.scss';
     .box {
         margin: 0 auto;
         width: 80%;
-        background-color: #fff;
+        background-color: $mainBGC;
         padding: 2.25rem 2.5rem;
         border-radius: .625rem;
 
@@ -48,7 +49,7 @@ export default {
             }
         }
         .user-data-role {
-            color : #b4b4b4;
+            color : $smallerTextColor;
         }
         
     }

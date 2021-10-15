@@ -34,8 +34,8 @@ export default {
 
         &:hover {
             cursor: pointer;
-            background-color: #fff;
-            box-shadow: inset 0px 0px 0px 3px $darkButton;
+            background-color: $mainBGC;
+            box-shadow: inset 0rem 0rem 0rem .1875rem $mainAccentColor;
             transform: translateY(-30%);
         }
 
@@ -44,15 +44,15 @@ export default {
             line-height: 1.5
         }
         h5 {
-            color : $darkButton;
-            font-size: 17px;
+            color : $mainAccentColor;
+            font-size: 1.0625rem;
             font-weight: 600;
         }
 
         .icons {
             .availability {
                 font-size: .9em;
-                color : #808080;
+                color : $smallerTextColor;
             }
             .icon {
             margin-right: .3em;

@@ -27,12 +27,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/style/variables.scss';
     .newsletter {
         margin-top : 3.125rem;
-        background-color: #244186;
+        background-color: $newsletterBGC;
         .wrapper {
             width: 100%;
-            color : #fff;
+            color : $alternateTextColor;
             img {
                     height: 100%;
                 }
@@ -48,19 +49,19 @@ export default {
                 .input {
                     margin-left: 3.125rem;
                     width: 90%;
-                    border-bottom: 1px solid #808080;
+                    border-bottom: .0625rem solid #808080;
                     
                     input {
-                        color: #fff;
+                        color: $alternateTextColor;
                         width: 95%;
                         outline: none;
                         background-color: transparent;
                         border : none;
                         
-                        padding-bottom: 10px;
-                        font-size: 27px;
+                        padding-bottom: .625rem;
+                        font-size: 1.6875rem;
                         &::placeholder {
-                            color:  #fff;
+                            color:  $alternateTextColor;
                             opacity: 1;
                         }
                     }
@@ -68,7 +69,7 @@ export default {
                         background-color: transparent;
                         outline: none;
                         border: none;
-                        color: #fff;
+                        color: $alternateTextColor;
                         font-size: 1.8125rem;
                     }
                 }

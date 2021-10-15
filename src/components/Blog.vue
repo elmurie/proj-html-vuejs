@@ -63,10 +63,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/style/common.scss';
+@import '../assets/style/variables.scss';
     .blog {
         position: relative;
-        background-color: #F5F7FA;
+        background-color: $blogBGC;
         padding : 5.625rem 0rem 4.25rem 0rem;
         .bgImgLines,
         .diamondDotsGreen,
@@ -97,13 +97,13 @@ export default {
             margin-top: 5rem;
             ul {
                 li:nth-child(1) {
-                    margin: 162px 0 0;
+                    margin: 10.125rem 0 0;
                 }
                 li:nth-child(2) {
                     width : 40%;
                 }
                 li:nth-child(3) {
-                    margin: 55px 0 0;
+                    margin: 3.4375rem 0 0;
                 }
                 li:nth-child(odd) {
                     width: 20%;
@@ -112,10 +112,10 @@ export default {
         }
         a {
             font-weight: 600;
-            color: #8C89A2;;
+            color: $smallerTextColor;
             margin : 5rem auto;
             span {
-                color : $darkButton;
+                color : $mainAccentColor;
             }
         }
     }

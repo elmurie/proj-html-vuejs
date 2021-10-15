@@ -20,9 +20,15 @@
 }
 
 // Common 
+
+html {
+    font-size: 16px;
+}
 body {
+    background-color: $mainBGC;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    color: $mainTextColor;
 }
 ol, 
 ul {
@@ -38,6 +44,8 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+// Zoom fx on hover
 
 .zoom {
     overflow: hidden;
@@ -67,24 +75,24 @@ a {
 }
 
 .dark-button {
-    background-color: $darkButton;
-    color: $whiteText;
+    background-color: $mainAccentColor;
+    color: $alternateTextColor;
     transition: .5s;
 
     &:hover {
-        background-color: $darkButtonHover;
-        color: $whiteText;
+        background-color: $mainAccentColorHover;
+        color: $alternateTextColor;
     }
 }
 
 .light-button {
     background-color: $lightButton;
-    color: $darkButton;
+    color: $mainAccentColor;
     transition: .5s;
 
     &:hover {
-        background-color: $darkButton;
-        color: $whiteText;
+        background-color: $mainAccentColor;
+        color: $alternateTextColor;
     }
 }
 
@@ -92,7 +100,7 @@ a {
 
 .handwriting {
     font-family: 'Caramel', cursive;
-    color: $darkButtonHover;
+    color: $mainAccentColorHover;
     font-size: 3.5625rem;
     margin-bottom : 0;
 }

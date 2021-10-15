@@ -3,6 +3,12 @@
     <Header :links="headerLinks"/>
     <Main/>
     <Footer :links="footerLinks"/>
+    <ul class="icons-fixed d-flex flex-column align-items-center">
+        <li><font-awesome-icon :icon="['fas', 'ruler-combined']"/></li>
+        <li><font-awesome-icon :icon="['far', 'life-ring']"/></li>
+        <li><font-awesome-icon :icon="['fas', 'book']"/></li>
+        <li><font-awesome-icon :icon="['fas', 'shopping-cart']"/></li>
+    </ul>
   </div>
 </template>
 
@@ -48,4 +54,20 @@ export default {
 
 <style lang="scss">
 @import './assets/style/common.scss';
+  #app {
+    position : relative;
+    .icons-fixed {
+            position: fixed;
+            z-index: 10;
+            background-color: $mainBGC;
+            right: 0;
+            top: 12.2%;
+            padding : .3125rem;
+            box-shadow: -0.25rem .25rem .9375rem .1875rem #0000004f;
+
+            & li {
+                margin : .4em 0;
+            }
+        }
+  }
 </style>

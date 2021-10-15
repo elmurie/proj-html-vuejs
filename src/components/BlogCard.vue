@@ -29,21 +29,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/style/variables.scss';
     .card-blog {
         position: relative;
         .card-text {
-            background-color: #fff;
+            background-color: $mainBGC;
             padding: 1.625rem 1.25rem 2.1875rem;
             
             h3 {
                 font-size: 1rem;
             }
+            .category,
+            .stats {
+                color : $smallerTextColor;
+            }
             .category {
-                color: #808080;
                 font-size: .9375rem;
             }
             .stats {
-                color : #808080;
                 font-size: .875rem;
                 .icon {
                     margin-right : .4em;
@@ -61,20 +64,17 @@ export default {
             }
         }
         .card-text {
-            color : #fff;
+            color : $alternateTextColor;
             position: absolute;
             bottom : 0;
             background-color: transparent;
 
-            span {
-                color : #fff;
+            span,
+            .stats {
+                color : $alternateTextColor;
             }
             h3 {
                 font-size: 2.125rem;
-            }
-
-            .stats {
-                color : #fff;
             }
         }
     }

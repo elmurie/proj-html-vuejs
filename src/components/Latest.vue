@@ -109,6 +109,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/style/variables.scss';
 .latest-online-courses {
     position: relative;
     margin-top: 3.5rem;
@@ -137,9 +138,9 @@ export default {
         transform: rotateZ(90deg);
         font-family: 'Work Sans', sans-serif;
         font-size: 11.25rem;
-        -webkit-text-stroke-width: 4px;
-        -webkit-text-stroke-color: #f5ece4;
-        -webkit-text-fill-color: #ffffff;
+        -webkit-text-stroke-width: .25rem;
+        -webkit-text-stroke-color: $sideTextColor;
+        -webkit-text-fill-color: $mainBGC;
     }
     .card-area {
         margin : 3.125rem auto;

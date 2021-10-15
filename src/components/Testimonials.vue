@@ -100,6 +100,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/style/variables.scss';
     section {
         .testimonials {
             padding : 0;
@@ -153,10 +154,10 @@ export default {
                 }
             }
             .testimonials-bottom {
-                background-color: #FAF8F6;
+                background-color: $testimonialsBGC;
 
                 .card-area {
-                    padding: 50px 20px;
+                    padding: 3.125rem 1.25rem;
 
                     .row li,
                     .bullets li {
@@ -172,7 +173,7 @@ export default {
                         }
                     }
                     .bullets {
-                        margin: 50px auto;
+                        margin: 3.125rem auto;
 
                         & li {
                             margin: 0 1.25rem;

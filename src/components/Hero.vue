@@ -24,12 +24,6 @@
             <kinesis-element class="spaceMonkey" :strength="150">
                 <img :src="spaceMonkey" alt="Space Monkey" class="spaceMonkey">
             </kinesis-element>
-            <ul class="icons d-flex flex-column align-items-center">
-                <li><font-awesome-icon :icon="['fas', 'ruler-combined']"/></li>
-                <li><font-awesome-icon :icon="['far', 'life-ring']"/></li>
-                <li><font-awesome-icon :icon="['fas', 'book']"/></li>
-                <li><font-awesome-icon :icon="['fas', 'shopping-cart']"/></li>
-            </ul>
         </section>
     </kinesis-container>
 </template>
@@ -57,8 +51,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/style/variables.scss';
     .hero {
-        background-color: #faf4ee;
+        background-color: $heroBGC;
         height: calc(100vh - 7.04125rem) ;
         position: relative;
         .text {
@@ -139,19 +134,6 @@ export default {
             top: 50%;
             left: 7%;
             z-index: 5;
-        }
-        .icons {
-            position: fixed;
-            z-index: 10;
-            background-color: #fff;
-            right: 0;
-            top: 5%;
-            padding : .3125rem;
-            box-shadow: -0.25rem .25rem .9375rem .1875rem hsla(0, 0%, 0%, 0.308);
-
-            & li {
-                margin : .4em 0;
-            }
         }
         .spaceMonkey,
         .painting,

@@ -49,18 +49,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/style/common.scss';
+@import '../assets/style/variables.scss';
     footer {
         padding: 6.3125rem 0 3.125rem 6.25rem;
         .left {
-            padding: 20px;
+            padding: 1.25rem;
             width: 95%;
             li {
                 line-height: 2.5rem;
 
                 &:hover,
                 & a:hover {
-                    color : $darkButton;
+                    color : $mainAccentColor;
                 }
             }
             li:first-child {
@@ -68,18 +68,22 @@ export default {
 
                 &:hover,
                 & a:hover {
-                    color: #000;
+                    color: $mainTextColor;
                     cursor: auto;
                 }
             }
 
             .address {
+                & li:nth-child(2):hover,
+                & li:nth-child(3):hover {
+                    color: $mainTextColor;
+                }
                 
                 & li:last-child:hover {
                     cursor: pointer;
                 }
                 .icons {
-                    color: #b4b4b4;
+                    color: $smallerTextColor;
                     font-size : 1.5rem;
 
                     
@@ -87,22 +91,22 @@ export default {
                     a {
                         margin-right : 1em;
                         &:hover {
-                        color: $darkButton;
+                        color: $mainAccentColor;
                         }
                     }
                 }
             }
         }
         .right {
-            padding: 27px 50px;
+            padding: 1.6875rem 3.125rem;
             .top {
-                padding-bottom: 35px;
+                padding-bottom: 2.1875rem;
                 .ig {
                     font-weight: 600;
                     
                 }
                 .account {
-                    color: $darkButton;
+                    color: $mainAccentColor;
                 }
             }
             .bottom {
@@ -110,7 +114,7 @@ export default {
                     width: 25.333333%;
                 }
                 li {
-                    padding : 0 15px 0 0;
+                    padding : 0 .9375rem 0 0;
                 }
             }
             img {
@@ -126,7 +130,7 @@ export default {
     }
     .credits {
         span {
-            color : #b4b4b4;
+            color : $smallerTextColor;
             margin: 3.125rem auto;
         }
     }
