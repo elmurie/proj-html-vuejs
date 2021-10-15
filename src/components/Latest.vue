@@ -63,7 +63,7 @@ export default {
 
                 },
                 {
-                    name : 'The Color Theory for Digital Artist',
+                    name : 'Ultimate Guide to Digital Sketching for Beginner',
                     price : '35.00',
                     lessons : '14',
                     students : '50',
