@@ -87,6 +87,7 @@ export default {
             width: 33%;
             bottom: 12%;
             right: 24%;
+            z-index: 0;
         }
         .circle {
             width: 22%;
@@ -111,6 +112,7 @@ export default {
             }
         }
         a {
+            z-index: 1;
             font-weight: 600;
             color: $smallerTextColor;
             margin : 5rem auto;

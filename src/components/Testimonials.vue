@@ -165,7 +165,8 @@ export default {
 
                     .row li,
                     .bullets li {
-                        opacity : .5;
+                        opacity : .2;
+                        transition: .7s;
 
                         &:hover {
                             cursor : pointer;
@@ -178,9 +179,9 @@ export default {
                     }
                     .bullets {
                         margin: 3.125rem auto;
-
                         & li {
                             margin: 0 1.25rem;
+                            transition: .5s;
 
                             &:hover {
                                 opacity: 1;
