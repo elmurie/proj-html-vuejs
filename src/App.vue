@@ -65,6 +65,7 @@ export default {
             top: 12.2%;
             padding : .3125rem;
             box-shadow: -0.25rem .25rem .9375rem .1875rem #0000004f;
+            border-radius: .3125rem 0 0 .3125rem;
 
             & li {
                 margin : .4em 0;
