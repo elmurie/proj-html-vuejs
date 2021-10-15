@@ -2,6 +2,7 @@
     <header>
         <div class="header-top d-flex justify-content-center align-items-center"> 
             <p>Starts on SATURDAY! Our biggest event of the year...</p>
+            <!-- Pass props to countdown component with desired date -->
             <Countdown :year="2021" :month="9" :date="16" :hour="10" :minute="0" :second="0" :millisecond="0"/>
             <button class="btn small dark-button">Get ticket</button>
         </div>

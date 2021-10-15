@@ -1,4 +1,5 @@
 <template>
+    <!-- condition inverts text and image on second row -->
     <div :class="[index > 1 ? 'flex-row-reverse' : '', '']" class="card-event d-flex align-items-center">
         <div class="card-img zoom">
             <img class="h-100" :src="require(`../assets/img/artist-event-0${info.img}-250x300.jpg`)" alt="info.title">

@@ -3,11 +3,12 @@
     <Header :links="headerLinks"/>
     <Main/>
     <Footer :links="footerLinks"/>
+    <!-- Fixed icons to the right -->
     <ul class="icons-fixed d-flex flex-column align-items-center">
-        <li><font-awesome-icon :icon="['fas', 'ruler-combined']"/></li>
-        <li><font-awesome-icon :icon="['far', 'life-ring']"/></li>
-        <li><font-awesome-icon :icon="['fas', 'book']"/></li>
-        <li><font-awesome-icon :icon="['fas', 'shopping-cart']"/></li>
+        <li><a href="#"><font-awesome-icon :icon="['fas', 'ruler-combined']"/></a></li>
+        <li><a href="#"><font-awesome-icon :icon="['far', 'life-ring']"/></a></li>
+        <li><a href="#"><font-awesome-icon :icon="['fas', 'book']"/></a></li>
+        <li><a href="#"><font-awesome-icon :icon="['fas', 'shopping-cart']"/></a></li>
     </ul>
   </div>
 </template>

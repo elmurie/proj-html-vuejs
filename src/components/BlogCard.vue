@@ -1,4 +1,5 @@
 <template>
+    <!-- The element in the middle is bigger if v-for index (in the parent component) is 1 -->
     <div :class="[index == 1 ? 'big' : '', '']" class="card-blog">
         <div class="card-img zoom">
             <img class="w-100" :src="require(`../assets/img/artist-blog-0${info.img}.jpg`)" alt="info.title">

@@ -28,10 +28,12 @@
                     </div>
                     <div class="card-area container-fluid">
                         <ul class="row justify-content-center">
+                            <!-- Opacity is changed on clicked item by adding bright class-->
                             <li @click="brightness(i)" :class="[i == counter ? 'bright' : '', '']" class="col-4" v-for="(testimony, i) in testimonialsInfo" :key="i"><TestimonialCard :testimonialsInfo="testimony"/></li>
                         </ul>
                         <div class="bullet-wrapper d-flex">
                             <ul class="bullets d-flex">
+                            <!-- Opacity is changed on clicked item -->
                                 <li @click="brightness(i)" :class="[i == counter ? 'bright' : '', '']" v-for="(testimony, i) in testimonialsInfo" :key="i"><font-awesome-icon :icon="['fas', 'circle']"/></li>
                             </ul>
                         </div>
