@@ -17,8 +17,10 @@
                         <img :src="diamondDotsGreen" alt="Diamond" class="diamondDotsGreen">
                     </kinesis-element>
                     <div class="poster zoom">
-                        <img class="" :src="centerImg" alt="Artist Poster">
-                        <img :src="youtube" alt="YouTube Icon" class="iconYT">
+                        <a href="https://www.youtube.com/watch?v=iik25wqIuFo" target="_blank">
+                            <img class="" :src="centerImg" alt="Artist Poster">
+                            <img :src="youtube" alt="YouTube Icon" class="iconYT">
+                        </a>
                     </div>
                 </div>
                 <div class="testimonials-bottom">
