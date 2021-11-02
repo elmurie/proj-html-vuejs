@@ -1,5 +1,7 @@
 # proj-html-vuejs
 
+See it deployed at https://morieri-theme.netlify.app/
+
 ## Project setup
 ```
 npm install
