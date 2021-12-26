@@ -5,6 +5,9 @@ Clone of a theme found on ThemeForest.<br/>
 You can see my own version <a href="https://morieri-theme.netlify.app">at this link<a/>.<br/>
 
 I have used **Vue.js** and the **vue-kinesis** library.<br/>
+  
+P.S. :
+  You get sympathy points if you find the easter egg :smiling_imp: 
 
 <details>
   <summary>Screenshots</summary>
