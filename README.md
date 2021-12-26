@@ -1,10 +1,10 @@
 # proj-html-vuejs
 
-Clone of a theme found on ThemeForest.<br/><br/>
+Clone of a theme found on ThemeForest.<br/>
 
-You can see my own version <a href="https://morieri-theme.netlify.app">at this link<a/>.<br/><br/>
+You can see my own version <a href="https://morieri-theme.netlify.app">at this link<a/>.<br/>
 
-I have used **Vue.js** and the **vue-kinesis** library.<br/><br/>
+I have used **Vue.js** and the **vue-kinesis** library.<br/>
 
 ## Project setup
 ```
