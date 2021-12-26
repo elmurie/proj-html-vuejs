@@ -6,6 +6,12 @@ You can see my own version <a href="https://morieri-theme.netlify.app">at this l
 
 I have used **Vue.js** and the **vue-kinesis** library.<br/>
 
+<details>
+  <summary>Screenshots</summary>
+  <img src="https://i.imgur.com/uG5YIc1.png" name="1">
+  <img src="https://i.imgur.com/MGsuzR4.png" name="2">
+</details>
+  
 ## Project setup
 ```
 npm install
@@ -15,16 +21,3 @@ npm install
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
