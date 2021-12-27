@@ -7,7 +7,7 @@ You can see my own version <a href="https://morieri-theme.netlify.app">at this l
 I have used **Vue.js** and the **vue-kinesis** library.<br/>
   
 P.S. :
-  You get sympathy points if you find the easter egg :smiling_imp: 
+  You get sympathy points if you find the easter egg :wink: 
 
 <details>
   <summary>Screenshots</summary>
